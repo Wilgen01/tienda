@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~swiper/swiper-bundle";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --white-color: hsl(0, 0%, 100%);
+    --black-color: hsl(0, 0%, 0%);
+    --darkGray-color: hsl(0, 0%, 55%);
+    --veryDarkGray-color: hsl(0, 0%, 41%);
+    --primary-color: #000C18;
+}
+
+body{
+    background: #EEEEEE;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+.cursor{
+    cursor: pointer;
+}
