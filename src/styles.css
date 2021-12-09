@@ -13,7 +13,8 @@
     --black-color: hsl(0, 0%, 0%);
     --darkGray-color: hsl(0, 0%, 55%);
     --veryDarkGray-color: hsl(0, 0%, 41%);
-    --primary-color: #000C18;
+    --primary-color: #051729;
+    --darkPrimary-color: #000C18;
 }
 
 body{

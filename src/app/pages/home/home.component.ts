@@ -20,4 +20,9 @@ export class HomeComponent implements OnInit {
     pagination: { clickable: true },
   };
 
+  recomendados: SwiperOptions = {
+    slidesPerView: 1.5,
+    spaceBetween: 10,
+  };
+
 }

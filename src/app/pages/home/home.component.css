@@ -3,13 +3,13 @@
 }
 
 .category{
-    margin: 2rem auto;
+    margin: 5rem auto;
 }
 
 .category__item{
     position: relative;
     width: 100%;
-    margin: .5rem 0;
+    margin: 1.5rem 0;
 }
 
 .category__img{
@@ -29,7 +29,23 @@
     left: 0;
     right: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: hsla(210, 78%, 9%, 0.5);
+}
+
+.recomendados{
+    width: 100%;
+    text-align: center;
+    line-height: .1rem;
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: 2.5rem ;
+    font-weight: 300;
+}
+
+.recomendados span{
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    background: #EEEEEE;
+    padding: .5rem ;
 }
 
 /* .details{

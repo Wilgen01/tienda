@@ -1,0 +1,57 @@
+.card{
+    background-color: var(--white-color);
+}
+.card__img img {
+    width: 100%;
+}
+
+.card__body ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly ;
+    margin: .7rem 0;
+}
+
+.card__size li span{
+    color: var(--primary-color);
+    background: #dddddd;
+    font-size: .7rem;
+    font-weight: 700;
+    padding: .3em .6em;
+    border-radius: 50rem;  
+}
+
+.card__price{
+    display: flex;
+    justify-content: space-evenly ;
+
+}
+
+.card__original{
+    font-size: .8rem;
+    text-decoration: line-through;
+}
+
+.card__descuento,
+.card__body h3{
+    text-align: center;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.card__cta{
+    text-align: center;
+    padding: .5rem 0;
+}
+.card__btn{
+    display: block;
+    text-decoration: none;
+    background: var(--darkPrimary-color);
+    width: 70%;
+    margin: auto;
+    font-size: .8rem;
+    padding: .5rem 1.5rem;
+    border-radius: 7px;
+    color: var(--white-color);
+}

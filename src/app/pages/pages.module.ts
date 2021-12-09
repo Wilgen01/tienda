@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { SwiperModule } from 'swiper/angular';
+import { ComponentsModule } from '../components/components/components.module';
 
 
 
@@ -11,6 +12,7 @@ import { SwiperModule } from 'swiper/angular';
   ],
   imports: [
     CommonModule,
+    ComponentsModule,
     SwiperModule
   ],
   exports: [

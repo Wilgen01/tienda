@@ -31,6 +31,40 @@
     </div>
 </section>
 
+
+
+<section class="container category">
+    <h3 class="recomendados"><span>Recomendados</span></h3>
+    <swiper [config]="recomendados">
+        <ng-template swiperSlide>
+            <app-card></app-card>
+        </ng-template>
+        <ng-template swiperSlide>
+            <app-card></app-card>
+        </ng-template>
+        <ng-template swiperSlide>
+            <app-card></app-card>
+        </ng-template>
+    </swiper>
+</section>
+
+<section class="container category">
+    <h3 class="recomendados"><span>Nuevo</span></h3>
+    <swiper [config]="recomendados">
+        <ng-template swiperSlide>
+            <app-card></app-card>
+        </ng-template>
+        <ng-template swiperSlide>
+            <app-card></app-card>
+        </ng-template>
+        <ng-template swiperSlide>
+            <app-card></app-card>
+        </ng-template>
+    </swiper>
+</section>
+
+
+
 <!-- 
 <section class="details">
     <div class="details__img">
