@@ -10,10 +10,12 @@
     position: relative;
     width: 100%;
     margin: 1.5rem 0;
+    overflow: hidden;
 }
 
 .category__img{
     width: 100%;
+    
 }
 
 .category__text{
@@ -25,7 +27,7 @@
     text-align: center;
     padding: .5rem;
     margin: 0;
-    bottom: .3rem;
+    bottom: .2rem;
     left: 0;
     right: 0;
     width: 100%;
@@ -46,6 +48,72 @@
     font-size: 1.2rem;
     background: #EEEEEE;
     padding: .5rem ;
+}
+
+.side{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    background: var(--black-color);
+    z-index: 1;
+    transition: .3s all ease-out;
+}
+
+.open{
+    left: 0;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 550px) {
+    .category--sec{
+        display: grid;
+        gap: 0 10px; 
+        grid-template-areas:
+        'item1 item1 item2 item2'
+        'main item3 item3 right';
+        overflow: hidden;
+    }
+    .item1{grid-area: item1;}
+    .item2{grid-area: item2;}
+    .item3{grid-area: item3;}
+
+    .recomendados span{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .recomendados{
+        line-height: 0rem;
+    }
+    .recomendados span{
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .hero__img{
+        width: 100%;
+        content: url(/assets/desktop/hero.svg);
+    }
+    .category--sec{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        grid-template-areas:
+        "item1 item2 item3";
+        overflow: hidden;
+    }
+
+    .category__text{
+        font-size: 1.5rem;
+    }
+
+
 }
 
 /* .details{

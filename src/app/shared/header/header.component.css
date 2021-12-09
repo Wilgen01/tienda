@@ -1,5 +1,6 @@
 
 .hamburguer .top{
+    position: relative;
     display: block;
     width: 30px;
     height: 5px;
@@ -7,9 +8,12 @@
     border-radius: 20px;
     transition: .3s all;
     margin: 2px 0;
+    z-index: 2;
+
 }
 
 .hamburguer .middle{
+    position: relative;
     display: block;
     width: 23px;
     height: 5px;
@@ -17,10 +21,12 @@
     border-radius: 20px;
     transition: .3s all;
     margin: 2px 0;
+    z-index: 2;
 
 }
 
 .hamburguer .bottom{
+    position: relative;
     display: block;
     width: 16px;
     height: 5px;
@@ -28,17 +34,19 @@
     border-radius: 20px;
     transition: .3s all;
     margin: 2px 0;
-
+    z-index: 2;
 }
 
 .close .top, 
 .close .bottom{
+    position: relative;
     display: block;
     height: 5px;
     width: 30px;
     background: var(--white-color);
     transition: .3s all;
     border-radius: 20px;
+    z-index: 2;
 }
 .close .top{
     transform: translateY(2px) rotate(45deg);
@@ -93,6 +101,48 @@
 .nav__img{
     width: 50px;
 }
+
+@media screen and (min-width: 768px) {
+   .nav__hamburguer{
+       display: none;
+   }
+
+   .nav__container{
+    grid-template-rows: none;
+
+   }
+
+   .nav__logo { grid-area: 1 / 1;}
+   .nav__search { grid-area: 1 /2/1/5;}
+
+   .nav__input,
+   .nav__input:focus-visible{
+    height: 2.6rem;
+    font-size: 1.2rem;
+   }
+   .nav__searchIcon svg{
+       width: 35px;
+       height: 35px;
+   }
+
+   .nav__category{
+       display: flex;
+       grid-area: 2 /2/2/5;
+       justify-content: space-evenly;
+       font-weight: 700;
+       color: var(--white-color);
+   }
+    
+}
+
+@media screen and (min-width: 900px) {
+    .nav__container{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+
 
 
 

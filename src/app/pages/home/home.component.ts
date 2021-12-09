@@ -8,8 +8,11 @@ SwiperCore.use([Pagination]);
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
 
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
   }
@@ -23,6 +26,18 @@ export class HomeComponent implements OnInit {
   recomendados: SwiperOptions = {
     slidesPerView: 1.5,
     spaceBetween: 10,
+    breakpoints: {
+      550: {
+        slidesPerView: 2.5,
+        spaceBetween: 10
+      },
+      700: {
+        slidesPerView: 2.5,
+      },
+      900:{
+        slidesPerView: 4.5
+      }
+    }
   };
 
 }

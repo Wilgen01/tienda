@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
+    list-style: none;
     font-family: 'Lato', sans-serif;
 }
 
@@ -28,4 +29,10 @@ body{
 
 .cursor{
     cursor: pointer;
+}
+
+@media screen and (min-width: 700px){
+    .container{
+        width: 80%;
+    }
 }
