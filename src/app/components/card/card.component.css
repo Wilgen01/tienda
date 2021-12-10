@@ -15,9 +15,17 @@
 .card__body ul{
     display: flex;
     list-style: none;
-    width: 100%;
     justify-content: space-evenly ;
-    margin: .7rem 0;
+    margin: .7rem auto;
+}
+
+.card__size{
+    width: max-content;
+    margin: auto;
+}
+
+.card__size li{
+    padding: 0 .2rem;
 }
 
 .card__size li span{

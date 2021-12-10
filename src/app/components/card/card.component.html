@@ -5,16 +5,18 @@
     <section class="card__body">
         <h3 class="card__tittle">{{productos.descripcion | slice: 0:50}}{{productos.descripcion.length >50? '...' : ''}}</h3>
         <ul class="card__size">
-            <li><span>S</span></li>
-            <li><span>M</span></li>
-            <li><span>L</span></li>
-            <li><span>X</span></li>
-            <li><span>XL</span></li>
+            <li *ngIf="productos.tallas.xs"><span>XS</span></li>
+            <li *ngIf="productos.tallas.s"><span>S</span></li>
+            <li *ngIf="productos.tallas.m"><span>M</span></li>
+            <li *ngIf="productos.tallas.l"><span>L</span></li>
+            <li *ngIf="productos.tallas.x"><span>X</span></li>
+            <li *ngIf="productos.tallas.xl"><span>XL</span></li>
         </ul>
 
         <div class="card__price">
-            <span class="card__original">$75.000</span>
-            <span class="card__descuento">$50.000</span>
+            <span *ngIf="productos.descuento" class="card__original">{{productos.precio | currency: "COP":"$":".0-0"}}</span>
+            <span *ngIf="productos.descuento" class="card__descuento">{{productos.precioDesscuento | currency: "COP":"$":".0-0"}}</span>
+            <span *ngIf="!productos.descuento" class="card__descuento">{{productos.precio | currency: "COP":"$":".0-0"}}</span>
         </div>
     </section>
     <footer class="card__cta">
