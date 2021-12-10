@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Producto } from '../../model/product.model';
 
 @Component({
   selector: 'app-card',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-
-  constructor() { }
+  @Input() productos!: Producto; 
+  constructor() {     
+    setTimeout(() => {
+      console.log(this.productos.image);
+    }, 500);
+  }
 
   ngOnInit(): void {
   }

@@ -1,9 +1,9 @@
 <section class="card">
     <header class="card__img">
-        <img src="./assets/camiseta.jfif" alt="">
+        <img [src]="productos.image[0].url" alt="">
     </header>
     <section class="card__body">
-        <h3>Camiseta estilo floripondio </h3>
+        <h3 class="card__tittle">{{productos.descripcion | slice: 0:50}}{{productos.descripcion.length >50? '...' : ''}}</h3>
         <ul class="card__size">
             <li><span>S</span></li>
             <li><span>M</span></li>
@@ -22,3 +22,4 @@
     </footer>
     
 </section>
+

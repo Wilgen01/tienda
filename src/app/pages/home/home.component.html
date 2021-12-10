@@ -36,23 +36,8 @@
 <section class="container category">
     <h3 class="recomendados"><span>Recomendados</span></h3>
     <swiper [config]="recomendados">
-        <ng-template swiperSlide>
-            <app-card></app-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-card></app-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-card></app-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-card></app-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-card></app-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-card></app-card>
+        <ng-template swiperSlide *ngFor="let product of productos let i = index">
+            <app-card [productos]="product"></app-card>
         </ng-template>
     </swiper>
 </section>
@@ -60,23 +45,8 @@
 <section class="container category">
     <h3 class="recomendados"><span>Nuevo</span></h3>
     <swiper [config]="recomendados">
-        <ng-template swiperSlide>
-            <app-card></app-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-card></app-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-card></app-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-card></app-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-card></app-card>
-        </ng-template>
-        <ng-template swiperSlide>
-            <app-card></app-card>
+        <ng-template swiperSlide *ngFor="let product of productos let i = index">
+            <app-card [productos]="product"></app-card>
         </ng-template>
     </swiper>
 </section>
