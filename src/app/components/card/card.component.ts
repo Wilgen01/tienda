@@ -10,9 +10,6 @@ import { Producto } from '../../model/product.model';
 export class CardComponent implements OnInit {
   @Input() productos!: Producto; 
   constructor() {     
-    setTimeout(() => {
-      console.log(this.productos.image);
-    }, 500);
   }
 
   ngOnInit(): void {

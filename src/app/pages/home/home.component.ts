@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
     this.item$.subscribe((data)=>{
          this.productos = data
     })
-    
   }
 
   ngOnInit(): void {

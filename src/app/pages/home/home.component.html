@@ -1,27 +1,27 @@
 <swiper [config]="config">
     <ng-template swiperSlide>
         <div class="hero">
-            <img src="./assets/hero.svg" class="hero__img" alt="">
+            <img src="./assets/hero.jpg" class="hero__img" alt="">
         </div>
     </ng-template>
     <ng-template swiperSlide>
         <div class="hero">
-            <img src="./assets/hero.svg" class="hero__img" alt="">
+            <img src="./assets/hero.jpg" class="hero__img" alt="">
         </div>
     </ng-template>
     <ng-template swiperSlide>
         <div class="hero">
-            <img src="./assets/hero.svg" class="hero__img" alt="">
+            <img src="./assets/hero.jpg" class="hero__img" alt="">
         </div>
     </ng-template>
 </swiper>
 
 <section class="container category category--sec">
-    <div class="category__item cursor item1">
+    <div class="category__item cursor item1" routerLink="mujer">
         <img src="./assets/mujer.jpg" alt="" class="category__img">
         <span class="category__text">Mujer</span>
     </div>
-    <div class="category__item cursor item2">
+    <div class="category__item cursor item2" routerLink="hombre">
         <img src="./assets/hombre.jpg" alt="" class="category__img">
         <span class="category__text">Hombre</span>
     </div>

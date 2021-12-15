@@ -1,0 +1,34 @@
+
+.breadcrum{
+    margin: 1.5rem 0;
+}
+.titulo{
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.breadcrum__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: var(--veryDarkGray-color);
+}
+
+.breadcrum__item{
+    text-transform: capitalize;
+}
+
+.breadcrum__item::before{
+    content: "\03e";
+    padding: 0 .5rem;
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.breadcrum__item:first-child::before{
+    content: "";
+    padding: 0;
+}

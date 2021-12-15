@@ -1,0 +1,7 @@
+<div class="breadcrum">
+    <h3 class="titulo">{{titulo}}</h3>
+    <ol class="breadcrum__container">
+        <li class="breadcrum__item">Inicio</li>
+        <li class="breadcrum__item" *ngFor="let item of ruta">{{item.replace('%20', ' ')}}</li>
+    </ol>
+</div>
