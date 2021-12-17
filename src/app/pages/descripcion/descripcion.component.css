@@ -1,0 +1,72 @@
+.image{
+    width: 100%;
+}
+
+.card__price{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: .5rem 0 .85rem;
+}
+
+.card__original{
+    text-decoration: line-through;
+}
+
+.card__descuento{
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.form-select{
+    width: 100%;
+    margin: .8rem auto;
+    height: 2.75rem;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    padding: 0 .5rem;
+    background: var(--white-color);
+}
+
+.card__cta{
+    text-align: center;
+    padding: .5rem 0;
+}
+.card__btn{
+    display: block;
+    text-decoration: none;
+    background: var(--darkPrimary-color);
+    width: 100%;
+    margin: auto;
+    font-size: 1.2rem;
+    padding: .75rem ;
+    border-radius: 7px;
+    color: var(--white-color);
+}
+
+.recomendados{
+    width: 100%;
+    text-align: center;
+    line-height: .1rem;
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: 2.5rem ;
+    font-weight: 300;
+}
+
+.recomendados span{
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    background: var(--background-color);
+    padding: .5rem ;
+}
+
+.descripcion__tittle{
+    font-size: 1.3rem;
+    margin: .5rem 0;
+}
+
+.descripcion__text{
+    font-size: .85rem;
+    line-height: 1.5rem;
+}
+

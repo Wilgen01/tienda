@@ -4,16 +4,16 @@
     <div class=""></div>
     <div class="grid" >
         <div class="" *ngFor="let product of productos let i = index">
-            <app-card [productos]="product"></app-card>
+            <app-card  [routerLink]="[product.descripcion]" [productos]="product"></app-card>
         </div>
         <div class="" *ngFor="let product of productos let i = index">
-            <app-card [productos]="product"></app-card>
+            <app-card  [routerLink]="[product.descripcion]" [productos]="product"></app-card>
         </div>
         <div class="" *ngFor="let product of productos let i = index">
-            <app-card [productos]="product"></app-card>
+            <app-card  [routerLink]="[product.descripcion]" [productos]="product"></app-card>
         </div>
         <div class="" *ngFor="let product of productos let i = index">
-            <app-card [productos]="product"></app-card>
+            <app-card  [routerLink]="[product.descripcion]" [productos]="product"></app-card>
         </div>
     </div>
 </div>

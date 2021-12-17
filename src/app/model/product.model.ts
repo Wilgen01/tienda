@@ -15,10 +15,10 @@ export interface Image {
 }
 
 export interface Tallas {
-    xl: boolean | null;
-    xs: boolean | null;
-    x:  boolean | null;
-    m:  boolean | null;
+    xl: boolean;
+    xs: boolean;
+    x:  boolean;
+    m:  boolean;
     s:  boolean;
-    l:  boolean | null;
+    l:  boolean;
 }

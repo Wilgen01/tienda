@@ -1,0 +1,26 @@
+.flotante{
+    position: fixed;
+    bottom: .8rem;
+    right: .8rem;
+    z-index: 1000;
+   
+}
+
+.flotante__container{
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    background: #4dc247;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    -webkit-box-shadow: 0px 0px 34px -6px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 0px 34px -6px rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 34px -6px rgba(0,0,0,0.7);
+}
+
+.icono{
+
+    font-size: 2.5rem;
+}

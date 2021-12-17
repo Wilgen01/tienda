@@ -11,6 +11,8 @@ import { Observable, Subscription } from 'rxjs';
 export class BreadcrumComponent implements OnInit {
   titulo : string = '';
   ruta : string [] = []
+  regex : RegExp = /\+|%20/g
+
   public tituloSubs$: Subscription = new Subscription;
   constructor(private router: Router) { 
     this.tituloSubs$ = this.getParametros().subscribe(({titulo})=>{
@@ -26,7 +28,7 @@ export class BreadcrumComponent implements OnInit {
     this.router.events.pipe(
       filter(resp =>resp instanceof NavigationEnd),
     ).subscribe((resp: any) =>{
-      this.ruta = resp.url.split('/').splice(2)
+      this.ruta = resp.url.split('/').splice(2)      
     })
     return this.router.events
     .pipe(

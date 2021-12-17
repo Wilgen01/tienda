@@ -3,7 +3,7 @@
     margin: 1.5rem 0;
 }
 .titulo{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -14,11 +14,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     color: var(--veryDarkGray-color);
 }
 
 .breadcrum__item{
     text-transform: capitalize;
+    font-size: .80rem;
 }
 
 .breadcrum__item::before{

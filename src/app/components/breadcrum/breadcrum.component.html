@@ -1,7 +1,7 @@
 <div class="breadcrum">
-    <h3 class="titulo">{{titulo}}</h3>
+    <h3 class="titulo">{{ruta[ruta.length-1].replace(regex, ' ')}}</h3>
     <ol class="breadcrum__container">
-        <li class="breadcrum__item">Inicio</li>
-        <li class="breadcrum__item" *ngFor="let item of ruta">{{item.replace('%20', ' ')}}</li>
+        <li class="breadcrum__item cursor" routerLink="/home">Inicio</li>
+        <li class="breadcrum__item cursor" *ngFor="let item of ruta">{{item.replace(regex, ' ')}}</li>
     </ol>
 </div>

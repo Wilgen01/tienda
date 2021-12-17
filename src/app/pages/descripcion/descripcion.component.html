@@ -1,0 +1,79 @@
+<app-breadcrum></app-breadcrum>
+
+
+
+<swiper style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff" [spaceBetween]="10" [navigation]="true"
+   [thumbs]="{ swiper: thumbsSwiper }" class="mySwiper2">
+   <ng-template swiperSlide *ngFor="let foto of (item$ | async)?.image">
+      <img [src]="foto.url" alt="">
+   </ng-template>
+</swiper>
+<swiper (swiper)="thumbsSwiper = $event" [spaceBetween]="10" [slidesPerView]="4" [freeMode]="true"
+   [watchSlidesProgress]="true" class="mySwiper">
+   <ng-template swiperSlide *ngFor="let foto of (item$ | async)?.image">
+      <img [src]="foto.url" alt="">
+   </ng-template>
+</swiper>
+
+<section class="container">
+   <div class="card__price">
+      <span *ngIf="(item$ | async).descuento" class="card__original">{{(item$ | async).precio | currency:
+         "COP":"$":".0-0"}}</span>
+      <span *ngIf="(item$ | async).descuento" class="card__descuento">{{(item$ | async).precioDesscuento | currency:
+         "COP":"$":".0-0"}}</span>
+      <span *ngIf="!(item$ | async).descuento" class="card__descuento">{{(item$ | async).precio | currency:
+         "COP":"$":".0-0"}}</span>
+   </div>
+
+   <label for="talla">Talla:</label>
+
+   <select formControlName="talla" class="form-select" aria-label="Default select example" id="talla">
+      <option class="fs-6" disabled selected value="null"><small class="fs-6">Seleccione su talla</small></option>
+      <option *ngIf="tallas.x" value="xs">XS</option>
+      <option *ngIf="tallas.s" value="S">S</option>
+      <option *ngIf="tallas.m" value="m">M</option>
+      <option *ngIf="tallas.l" value="l">L</option>
+      <option *ngIf="tallas.xl" value="xl">XL</option>
+   </select>
+
+   <label for="color">Color:</label>
+
+   <select formControlName="talla" class="form-select" aria-label="Default select example" id="color">
+      <option class="fs-6" disabled selected value="null"><small class="fs-6">Seleccione el color</small></option>
+      <option value="xs">Blanco</option>
+      <option value="S">Negro</option>
+      <option value="m">Gris</option>
+   </select>
+   <section class="card__cta">
+      <a href="./" class="card__btn">Agregar al carrito</a>
+   </section>
+
+  <section class="section">
+      <h2 class="descripcion__tittle">Descripcion del producto</h2>
+      <p class="descripcion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt reprehenderit maiores laudantium in, vel provident exercitationem nemo quasi, rerum doloremque quod quaerat nam. Ab illo facere reprehenderit veniam. Earum minus at excepturi, sit blanditiis repellat consequatur quidem suscipit aliquid. Nobis minima rerum harum optio asperiores impedit quas dolorem autem suscipit?</p>
+  </section>
+
+   <section class="container w-100 section">
+      <h3 class="recomendados"><span>Tambien te puede interesar</span></h3>
+      <swiper [config]="recomendados">
+          <ng-template swiperSlide >
+              <img src="./assets/1.jpeg" alt="">
+          </ng-template>
+          <ng-template swiperSlide >
+              <img src="./assets/1.jpeg" alt="">
+          </ng-template>
+          <ng-template swiperSlide >
+              <img src="./assets/1.jpeg" alt="">
+          </ng-template>
+          <ng-template swiperSlide >
+              <img src="./assets/1.jpeg" alt="">
+          </ng-template>
+          <ng-template swiperSlide >
+              <img src="./assets/1.jpeg" alt="">
+          </ng-template>
+          <ng-template swiperSlide >
+              <img src="./assets/1.jpeg" alt="">
+          </ng-template>
+      </swiper>
+  </section>
+</section>

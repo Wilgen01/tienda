@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductsComponent } from './products/products.component';
+import { DescripcionComponent } from './descripcion/descripcion.component';
 
 
 
@@ -14,7 +15,8 @@ import { ProductsComponent } from './products/products.component';
   declarations: [
     HomeComponent,
     PagesComponent,
-    ProductsComponent
+    ProductsComponent,
+    DescripcionComponent
   ],
   imports: [
     CommonModule,
