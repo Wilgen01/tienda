@@ -20,7 +20,7 @@
 
 .breadcrum__item{
     text-transform: capitalize;
-    font-size: .80rem;
+    font-size: .9rem;
 }
 
 .breadcrum__item::before{

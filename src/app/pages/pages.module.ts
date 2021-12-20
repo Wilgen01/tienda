@@ -8,6 +8,8 @@ import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProductsComponent } from './products/products.component';
 import { DescripcionComponent } from './descripcion/descripcion.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +25,9 @@ import { DescripcionComponent } from './descripcion/descripcion.component';
     ComponentsModule,
     SwiperModule, 
     RouterModule,
-    SharedModule
+    SharedModule, 
+    LazyLoadImageModule,
+    ReactiveFormsModule
   ],
   exports: [
     HomeComponent

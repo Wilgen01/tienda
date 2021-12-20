@@ -1,6 +1,6 @@
 <section class="card">
     <header class="card__img">
-        <img [src]="productos.image[0].url" alt="">
+        <img [defaultImage]="defaultImage" [lazyLoad]="productos.image[0].url" onerror="this.onerror=null;this.src='assets/imgPlaceholder.png';" >
     </header>
     <section class="card__body">
         <h3 class="card__tittle">{{productos.descripcion | slice: 0:50}}{{productos.descripcion.length >50? '...' : ''}}</h3>
@@ -20,7 +20,7 @@
         </div>
     </section>
     <footer class="card__cta">
-        <a href="./" class="card__btn">Ver mas...</a>
+        <a [routerLink]="[productos.descripcion]" class="card__btn">Ver mas...</a>
     </footer>
     
 </section>

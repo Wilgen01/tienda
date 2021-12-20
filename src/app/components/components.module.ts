@@ -4,6 +4,7 @@ import { CardComponent } from './card/card.component';
 import { BreadcrumComponent } from './breadcrum/breadcrum.component';
 import { WhatsappComponent } from './whatsapp/whatsapp.component';
 import { RouterModule } from '@angular/router';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   declarations: [CardComponent, BreadcrumComponent, WhatsappComponent],
   imports: [
     CommonModule, 
-    RouterModule
+    RouterModule, 
+    LazyLoadImageModule
   ],
   exports: [
     CardComponent,

@@ -22,3 +22,11 @@ export interface Tallas {
     s:  boolean;
     l:  boolean;
 }
+
+export interface Pedido{
+    articulo: string,
+    talla: string,
+    cantidad: number,
+    precio: number,
+    url: string
+  }

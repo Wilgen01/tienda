@@ -12,6 +12,7 @@
 
 }
 
+
 .hamburguer .middle{
     position: relative;
     display: block;
@@ -103,6 +104,18 @@
 
 .nav__img{
     width: 50px;
+}
+
+.d-none{
+    display: none;
+}
+
+.animate__animated.animate__slideInRight {
+    --animate-duration: .4s;
+  }
+  
+.cartContainer{
+  z-index: 4;  
 }
 
 @media screen and (min-width: 768px) {

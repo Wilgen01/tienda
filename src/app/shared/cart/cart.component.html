@@ -1,0 +1,36 @@
+<section class="side" id="cart-side">
+
+    <header class="cart__header">
+        <h3 class="cart__tittle">Carrito de compras</h3>
+    </header>
+
+    <section class="cart__container container">
+        <div *ngFor="let item of pedido; let i = index">
+            <div class="cart__item">
+                <div class="cart__image">
+                    <img [src]="item.url" alt="" class="w-100">
+                </div>
+                <div class="cart__description">
+                    <h3>{{item.articulo}}</h3>
+                    <p>Talla: {{item.talla}}</p>
+                    <p>Precio: {{item.precio | currency : 'COP' : '$' : '.0-0'}}</p>
+                    <div class="cart__cantidad">
+                        <span (click)="restarItem(i)" class="cart__minus"><i class="fas fa-minus"></i></span>
+                        <input #inputValue type="number" (keyup)="actualizarItem(i, inputValue.value)"
+                            [value]="item.cantidad" class="cart__input">
+                        <span (click)="sumarItem(i)" class="cart__plus"><i class="fas fa-plus"></i></span>
+                    </div>
+                </div>
+            </div>
+            <hr class="cart__line">
+        </div>
+        <div class="cart__total">
+            <h3 class="cart__text">Total:</h3>
+            <p  class="cart__text">{{precio | currency : 'COP' : '$' : '.0-0'}}</p>
+        </div>
+        <section class="cart__cta">
+            <button class="cart__btn">Ir a pagar</button>
+         </section>
+    </section>
+
+</section>
